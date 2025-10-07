@@ -1,5 +1,3 @@
-from multiprocessing.spawn import is_forking
-
 import cv2
 import numpy as np
 from numpy.f2py.symbolic import as_real
@@ -34,3 +32,4 @@ cv2.imshow('Myroslava and Andriy copy color', img_copy_color)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
