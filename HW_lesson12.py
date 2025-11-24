@@ -32,6 +32,9 @@ model.add(layers.Conv2D(filters = 128, kernel_size = (3, 3),
                         activation = 'relu'))
 model.add(layers.MaxPooling2D(2, 2))
 
+model.add(layers.Conv2D(256, (3,3), activation='relu'))
+model.add(layers.MaxPooling2D(2,2))
+
 model.add(layers.Flatten())
 
 #5.ШАР
@@ -59,4 +62,5 @@ predictions = model.predict(img_array)
 predicted_index = np.argmax(predictions[0])
 
 print(f'Імовірність по класам: {predictions[0]}')
+
 print(f'Модель визначила: {class_name[predicted_index]}')
